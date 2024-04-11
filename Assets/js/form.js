@@ -12,10 +12,12 @@ document.getElementById("form").addEventListener("submit", function (event) {
     const content = document.getElementById("content").value;
     console.log('submitted content: ', content);
    
+    // Add alert box if form is left blank
     if (!username,!title,!content) {
     alert('Please complete the form');
     } else {
 
+    
 const blog = {
     username: username,
     title: title,
@@ -28,6 +30,6 @@ console.log(blog);
     localStorage.setItem("blogEntry", JSON.stringify(blogs));
     window.location.href = './blog.html'
 }
-    //if i dont enter anything in the blog, then an alert will pop up asking to 'complete the form'
+
 
 });
